@@ -1,0 +1,110 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{ 
+char choice;
+char ar[3][3]={{'1','2','3'},{'4','5','6'},{'7',
+'8','9'}};
+printf("\t\t    WELCOME TO\n");
+printf("\t\tT I C  T A C  T O E\n");
+printf("PLAYER 1: X\n");
+printf("PLAYER 2: O\n");
+printf("\t\t__%c__|__%c__|__%c__\n",ar[0][0],ar[0][1]
+ ,ar[0][2]);
+
+  printf("\t\t__%c__|__%c__|__%c__\n",ar[1][0],ar[1][1]
+ ,ar[1][2]);
+ printf("\t\t__%c__|__%c__|__%c__\n",ar[2][0],ar[2][1]
+ ,ar[2][2]);
+ printf("\t\t     |     |     \n");
+ printf("\tGO PLAYER 1:\n");
+ scanf("%c",&choice);
+ switch(choice){
+	case '1':
+		ar[0][0]='X';
+		break;
+	case '2':
+		ar[0][1]='X';
+		break;
+	case '3':
+		ar[0][2]='X';
+		break;
+	case '4':
+		ar[1][0]='X';
+		break;
+	case '5':
+		ar[1][1]='X';
+		break;
+	case '6':
+		ar[1][2]='X';
+		break;
+	case '7':
+		ar[2][0]='X';
+		break;
+	case '8':
+		ar[2][1]='X';
+		break;	
+	case '9':
+		ar[2][2]='X';
+		break;	
+	default:
+		printf("invalid choice");
+	}
+  printf("\t\t__%c__|__%c__|__%c__\n",ar[0][0],ar[0]
+  [1],ar[0][2]);
+  printf("\t\t__%c__|__%c__|__%c__\n",ar[1][0],ar[1][1]
+ ,ar[1][2]);
+  printf("\t\t__%c__|__%c__|__%c__\n",ar[2][0],ar[2][1]
+ ,ar[2][2]);
+  printf("\t\t      |      |     \n");
+char ch;
+//printf("..%c..",ch);
+//ch='2';
+   printf("\tGO PLAYER 2: ");
+	scanf("%c",&ch);
+//scanf("%d",&ch);
+	printf("%c..%c..\n",ch,ch);
+	switch(ch)
+	{
+	case 1:
+		ar[0][0]='O';
+		break;
+	case 2:
+		ar[0][1]='O';
+		break;
+	case 3:
+		ar[0][2]='O';
+		break;
+	case 4:
+		ar[1][0]='O';
+		break;
+	case 5:
+		ar[1][1]='O';
+		break;
+	case 6:
+		ar[1][2]='O';
+		break;
+	case 7:
+		ar[2][0]='O';
+		break;
+	case 8:
+		ar[2][1]='O';
+		break;	
+	case 9:
+		ar[2][2]='O';
+		break;	
+	default:
+		printf("invalid choice1");
+	}
+printf("\t\t__%c__|__%c__|__%c__\n",ar[0][0],ar[0]
+  [1],ar[0][2]);
+printf("\t\t__%c__|__%c__|__%c__\n",ar[1][0],ar[1][1]
+ ,ar[1][2]);
+printf("\t\t__%c__|__%c__|__%c__\n",ar[2][0],ar[2][1]
+ ,ar[2][2]);
+printf("\t\t      |      |     \n");
+
+
+return 0;
+getch();
+}
