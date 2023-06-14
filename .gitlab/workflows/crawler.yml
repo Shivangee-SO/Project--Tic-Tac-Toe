@@ -1,0 +1,24 @@
+name: InnerSource repo crawler
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '00 5 * * *'
+
+jobs:
+  build:
+    name: InnerSource repo crawler
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Run crawler tool
+      uses: docker://ghcr.io/zkoppert/innersource-crawler:v1
+      env:
+        GH_TOKEN: ${{ secrets.GH_GTT }}
+        # ORGANIZATION: ${{ secrets.GHApi }}
+        # for multiple topics, add them after a comma eg:
+        # TOPIC: inner-source,actions,security,python
+        TOPIC: inner-source
